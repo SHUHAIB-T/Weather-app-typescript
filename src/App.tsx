@@ -1,7 +1,9 @@
-function App() {
+function App(): JSX.Element {
   return (
     <>
-      <h1>Hello world</h1>
+      <main className="flex justify-center items-center bg-gradient-to-r from-green-400 to-blue-500 h-[100vh] w-full">
+        
+      </main>
     </>
   );
 }
