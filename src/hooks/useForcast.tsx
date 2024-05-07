@@ -1,7 +1,7 @@
 import { useEffect, ChangeEvent, useState } from "react";
 import { optionType, forecastType } from "../types/index.ts";
 import axios from "axios";
-const API_KEY = "5c7d27eac8797b58bd2c5c187d766415";
+const API_KEY = import.meta.env.VITE_API_KEY;
 
 export default function useForcast() {
   const [city, setCity] = useState<optionType | null>(null);
