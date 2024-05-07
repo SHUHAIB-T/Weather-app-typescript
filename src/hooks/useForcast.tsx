@@ -11,7 +11,7 @@ export default function useForcast() {
 
   const getSearchOptions = async (term: string) => {
     const response = await axios.get(
-      `http://api.openweathermap.org/geo/1.0/direct?q=${term.trim()}&limit=5&appid=${API_KEY}`
+      `https://api.openweathermap.org/geo/1.0/direct?q=${term.trim()}&limit=5&appid=${API_KEY}`
     );
     setOptions(response.data);
   };
@@ -21,7 +21,7 @@ export default function useForcast() {
   };
   const getForecast = async (data: optionType) => {
     const response = await axios.get(
-      `http://api.openweathermap.org/data/2.5/forecast?lat=${data.lat}&lon=${data.lon}&units=metric&lang=en&appid=${API_KEY}`
+      `https://api.openweathermap.org/data/2.5/forecast?lat=${data.lat}&lon=${data.lon}&units=metric&lang=en&appid=${API_KEY}`
     );
     const resdata = response.data;
     if (resdata) {
